@@ -13,8 +13,8 @@ JSON bridge — no changes to the client required.
 the canonical Java `os-core-common` (`Map<String, Object>`). That's the right
 call for the client. But consumers who want **intellisense on a specific
 OSDU `kind` and version** still deserve it. This library provides those
-typed POCOs as an opt-in package, scoped to the kinds and versions a team
-actually uses.
+typed POCOs as an opt-in package, covering every `work-product-component`,
+`master-data` and `dataset` type in the pinned snapshot.
 
 ```csharp
 using V15 = Osdu.Schemas.WorkProductComponent.WellLog.V1_5_0;
