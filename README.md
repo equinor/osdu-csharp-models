@@ -78,7 +78,7 @@ carry values outside the published enum sets.
 ## Repo layout
 
 ```
-osdu-csharp-schemas/
+osdu-csharp-models/
 ├── README.md
 ├── schemas/M27.0/                 # pinned snapshot of data-definitions Generated/
 ├── tools/SchemaGen/                # dotnet console: extracts `data`, flattens, runs NJsonSchema

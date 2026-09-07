@@ -1,12 +1,12 @@
 # Contributing
 
-Thanks for your interest in contributing to `osdu-csharp-schemas`! This project
+Thanks for your interest in contributing to `osdu-csharp-models`! This project
 generates typed C# domain models from a pinned snapshot of the OSDU schema
 registry. Contributions are welcome via issues and pull requests.
 
 ## Reporting issues
 
-- Search [existing issues](https://github.com/equinor/osdu-csharp-schemas/issues)
+- Search [existing issues](https://github.com/equinor/osdu-csharp-models/issues)
   before opening a new one.
 - For security vulnerabilities, **do not** open a public issue — follow
   [`SECURITY.md`](SECURITY.md) instead.
