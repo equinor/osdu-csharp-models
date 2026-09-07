@@ -2,7 +2,7 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using NJsonSchema;
 using NJsonSchema.CodeGeneration.CSharp;
-using Osdu.Schemas.SchemaGen;
+using Osdu.Models.SchemaGen;
 
 // Snapshot-driven generator. The manifest pins the snapshot directory and the
 // schema groups in scope; every entity schema in those groups (all versions) is
@@ -25,7 +25,7 @@ var manifest = JsonSerializer.Deserialize<Manifest>(
     ?? throw new InvalidOperationException("Failed to deserialize manifest.");
 
 var schemaRoot = Path.Combine(repoRoot, "schemas", manifest.Snapshot);
-var generatedRoot = Path.Combine(repoRoot, "src", "Osdu.Schemas", "Generated");
+var generatedRoot = Path.Combine(repoRoot, "src", "Osdu.Models", "Generated");
 
 var entries = DiscoverEntries(schemaRoot, manifest.Groups);
 
@@ -114,7 +114,7 @@ static List<ManifestEntry> DiscoverEntries(string schemaRoot, IReadOnlyList<stri
 
             entries.Add(new ManifestEntry(
                 File: $"{group}/{Path.GetFileName(path)}",
-                Namespace: $"Osdu.Schemas.{groupNs}.{typeToken}.{versionToken}",
+                Namespace: $"Osdu.Models.{groupNs}.{typeToken}.{versionToken}",
                 OutputDir: Path.Combine(groupNs, typeToken, versionToken)));
         }
     }
@@ -175,12 +175,12 @@ static void StripValueConstraints(JsonNode? node)
 static string FindRepoRoot()
 {
     var dir = new DirectoryInfo(AppContext.BaseDirectory);
-    while (dir is not null && !File.Exists(Path.Combine(dir.FullName, "Osdu.Schemas.slnx")))
+    while (dir is not null && !File.Exists(Path.Combine(dir.FullName, "Osdu.Models.slnx")))
     {
         dir = dir.Parent;
     }
     return dir?.FullName
-        ?? throw new InvalidOperationException("Could not locate Osdu.Schemas.slnx in ancestry.");
+        ?? throw new InvalidOperationException("Could not locate Osdu.Models.slnx in ancestry.");
 }
 
 internal sealed record Manifest(string Snapshot, List<string> Groups);

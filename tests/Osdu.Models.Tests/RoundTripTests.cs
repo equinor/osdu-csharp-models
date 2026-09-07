@@ -3,10 +3,10 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using Xunit;
-using V14 = Osdu.Schemas.WorkProductComponent.WellLog.V1_4_0;
-using V15 = Osdu.Schemas.WorkProductComponent.WellLog.V1_5_0;
+using V14 = Osdu.Models.WorkProductComponent.WellLog.V1_4_0;
+using V15 = Osdu.Models.WorkProductComponent.WellLog.V1_5_0;
 
-namespace Osdu.Schemas.Tests;
+namespace Osdu.Models.Tests;
 
 /// <summary>
 /// Round-trip and typed-access coverage for <b>every</b> generated
@@ -204,14 +204,14 @@ public class RoundTripTests
     /// <c>Data</c> type, applying the same naming the generator uses: PascalCase
     /// group segment and dotted dataset type names concatenated
     /// (<c>File.Generic</c> → <c>FileGeneric</c>), e.g.
-    /// <c>Osdu.Schemas.Dataset.FileGeneric.V1_1_0.Data</c>.
+    /// <c>Osdu.Models.Dataset.FileGeneric.V1_1_0.Data</c>.
     /// </summary>
     private static Type ResolveDataType(string group, string type, string version)
     {
         var groupNs = GroupToPascal(group);
         var typeToken = string.Concat(type.Split('.', StringSplitOptions.RemoveEmptyEntries));
         var versionToken = "V" + version.Replace('.', '_');
-        var fullName = $"Osdu.Schemas.{groupNs}.{typeToken}.{versionToken}.Data";
+        var fullName = $"Osdu.Models.{groupNs}.{typeToken}.{versionToken}.Data";
 
         return SchemasAssembly.GetType(fullName, throwOnError: false)
             ?? throw new ArgumentException(
@@ -273,11 +273,11 @@ public class RoundTripTests
     private static string FindRepoRoot()
     {
         var dir = new DirectoryInfo(AppContext.BaseDirectory);
-        while (dir is not null && !File.Exists(Path.Combine(dir.FullName, "Osdu.Schemas.slnx")))
+        while (dir is not null && !File.Exists(Path.Combine(dir.FullName, "Osdu.Models.slnx")))
         {
             dir = dir.Parent;
         }
         return dir?.FullName
-            ?? throw new InvalidOperationException("Could not locate Osdu.Schemas.slnx in ancestry.");
+            ?? throw new InvalidOperationException("Could not locate Osdu.Models.slnx in ancestry.");
     }
 }

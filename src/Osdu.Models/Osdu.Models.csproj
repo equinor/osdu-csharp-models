@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>Equinor.Osdu.Schemas</PackageId>
+    <PackageId>Equinor.Osdu.Models</PackageId>
     <Version>0.3.1</Version>
-    <RootNamespace>Osdu.Schemas</RootNamespace>
+    <RootNamespace>Osdu.Models</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Label="Package">

@@ -17,11 +17,11 @@ Requires the .NET SDK (see `Directory.Build.props`/`global.json` for the target)
 
 ```bash
 dotnet run --project tools/SchemaGen   # regenerate the C# from the pinned snapshot
-dotnet build Osdu.Schemas.slnx          # build everything
+dotnet build Osdu.Models.slnx          # build everything
 dotnet test                             # round-trip + integration tests
 ```
 
-Generated code under `src/Osdu.Schemas/Generated/` is gitignored and fully
+Generated code under `src/Osdu.Models/Generated/` is gitignored and fully
 regenerable from the pinned snapshot in `schemas/`. Do not hand-edit generated
 models; change the generator (`tools/SchemaGen`) or the snapshot instead.
 

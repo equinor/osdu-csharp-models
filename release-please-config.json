@@ -4,13 +4,13 @@
   "extra-files": [
     {
       "type": "xml",
-      "path": "src/Osdu.Schemas/Osdu.Schemas.csproj",
+      "path": "src/Osdu.Models/Osdu.Models.csproj",
       "xpath": "/Project/PropertyGroup/Version"
     }
   ],
   "packages": {
     ".": {
-      "package-name": "Osdu.Schemas",
+      "package-name": "Osdu.Models",
       "release-type": "simple",
       "include-component-in-tag": false,
       "changelog-sections": [
