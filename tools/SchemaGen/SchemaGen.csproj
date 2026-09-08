@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <IsPackable>false</IsPackable>
-    <RootNamespace>Osdu.Schemas.SchemaGen</RootNamespace>
+    <RootNamespace>Osdu.Models.SchemaGen</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

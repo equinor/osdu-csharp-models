@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>Equinor.Osdu.Schemas</PackageId>
+    <PackageId>Equinor.Osdu.Models</PackageId>
     <Version>0.3.1</Version>
-    <RootNamespace>Osdu.Schemas</RootNamespace>
+    <RootNamespace>Osdu.Models</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Label="Package">
@@ -11,8 +11,8 @@
     <Description>Typed C# domain models generated from the OSDU schema registry. Composes with Equinor.OsduCsharpClient through its UntypedNode JSON bridge.</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageProjectUrl>https://github.com/equinor/osdu-csharp-schemas</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/equinor/osdu-csharp-schemas</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/equinor/osdu-csharp-models</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/equinor/osdu-csharp-models</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>osdu;schemas;welllog;wellbore;wbddms</PackageTags>
   </PropertyGroup>

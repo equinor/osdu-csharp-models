@@ -1,13 +1,13 @@
 using System.Text.Json;
 using Equinor.OsduCsharpClient.Facade;
 using Equinor.OsduCsharpClient.WellboreDdms.Models;
-using V15 = Osdu.Schemas.WorkProductComponent.WellLog.V1_5_0;
-using V14 = Osdu.Schemas.WorkProductComponent.WellLog.V1_4_0;
+using V15 = Osdu.Models.WorkProductComponent.WellLog.V1_5_0;
+using V14 = Osdu.Models.WorkProductComponent.WellLog.V1_4_0;
 
 // ---------------------------------------------------------------------------
 // Demonstrates the v0.1 outcome end-to-end:
 //
-//   * Osdu.Schemas provides typed POCOs (`V1_5_0.Data`, `V1_5_0.Curve`, …)
+//   * Osdu.Models provides typed POCOs (`V1_5_0.Data`, `V1_5_0.Curve`, …)
 //     with full intellisense.
 //   * Equinor.OsduCsharpClient provides the WBDDMS Record envelope and the
 //     UntypedNode JSON bridge.

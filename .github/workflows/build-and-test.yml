@@ -29,7 +29,7 @@ jobs:
         run: dotnet run --project tools/SchemaGen --configuration Release
 
       - name: Build
-        run: dotnet build Osdu.Schemas.slnx --configuration Release
+        run: dotnet build Osdu.Models.slnx --configuration Release
 
       - name: Fetch OSDU example payloads (best-effort)
         continue-on-error: true
@@ -44,4 +44,4 @@ jobs:
           git -C ../data-definitions sparse-checkout set Examples
 
       - name: Test
-        run: dotnet test Osdu.Schemas.slnx --configuration Release --no-build --logger "console;verbosity=normal"
+        run: dotnet test Osdu.Models.slnx --configuration Release --no-build --logger "console;verbosity=normal"

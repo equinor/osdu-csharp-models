@@ -8,7 +8,7 @@ obj/
 *.snupkg
 
 # Generated C# (re-run `dotnet run --project tools/SchemaGen` to regenerate)
-src/Osdu.Schemas/Generated/
+src/Osdu.Models/Generated/
 
 # IDE
 .vs/

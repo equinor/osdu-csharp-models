@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Osdu.Schemas.Samples.IngestWellLog</RootNamespace>
+    <RootNamespace>Osdu.Models.Samples.IngestWellLog</RootNamespace>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
     <!-- Local project references to the two libraries this sample composes. -->
-    <ProjectReference Include="..\..\src\Osdu.Schemas\Osdu.Schemas.csproj" />
+    <ProjectReference Include="..\..\src\Osdu.Models\Osdu.Models.csproj" />
     <ProjectReference Include="..\..\..\osdu-csharp-client\src\OsduCsharpClient\OsduCsharpClient.csproj" />
   </ItemGroup>
 

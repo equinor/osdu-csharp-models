@@ -1,6 +1,6 @@
 using System.Text.Json.Nodes;
 
-namespace Osdu.Schemas.SchemaGen;
+namespace Osdu.Models.SchemaGen;
 
 /// <summary>
 /// Resolves <c>$ref</c> and merges <c>allOf</c> chains into a single inline

@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Osdu.Schemas\Osdu.Schemas.csproj" />
+    <ProjectReference Include="..\..\src\Osdu.Models\Osdu.Models.csproj" />
   </ItemGroup>
 
 </Project>
