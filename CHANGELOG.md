@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.0](https://github.com/equinor/osdu-csharp-models/compare/v0.3.1...v1.0.0) (2026-09-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename the library from Osdu.Schemas to Osdu.Models ([#20](https://github.com/equinor/osdu-csharp-models/issues/20))
+
+### Dependencies
+
+* bump the github-actions group with 3 updates ([#16](https://github.com/equinor/osdu-csharp-models/issues/16)) ([b7c8699](https://github.com/equinor/osdu-csharp-models/commit/b7c8699090f20260bae8ae1b70d941869cd5cb65))
+* bump the github-actions group with 3 updates ([#19](https://github.com/equinor/osdu-csharp-models/issues/19)) ([801a022](https://github.com/equinor/osdu-csharp-models/commit/801a022372c563b1b289693ba5722a45520e0e86))
+
+
+### Code Refactoring
+
+* rename the library from Osdu.Schemas to Osdu.Models ([#20](https://github.com/equinor/osdu-csharp-models/issues/20)) ([4210bfb](https://github.com/equinor/osdu-csharp-models/commit/4210bfb97803c8f836c3137b19d51dad7201c604))
+
 ## [0.3.1](https://github.com/equinor/osdu-csharp-schemas/compare/v0.3.0...v0.3.1) (2026-08-18)
 
 
