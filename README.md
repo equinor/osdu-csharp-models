@@ -1,4 +1,4 @@
-# Equinor.Osdu.Schemas
+# Equinor.Osdu.Models
 
 Typed C# domain models generated from the [OSDU schema registry][schemas].
 Composes with [`Equinor.OsduCsharpClient`][client] through its `UntypedNode`
@@ -13,12 +13,12 @@ JSON bridge — no changes to the client required.
 the canonical Java `os-core-common` (`Map<String, Object>`). That's the right
 call for the client. But consumers who want **intellisense on a specific
 OSDU `kind` and version** still deserve it. This library provides those
-typed POCOs as an opt-in package, scoped to the kinds and versions a team
-actually uses.
+typed POCOs as an opt-in package, covering every `work-product-component`,
+`master-data` and `dataset` type in the pinned snapshot.
 
 ```csharp
-using V15 = Osdu.Schemas.WorkProductComponent.WellLog.V1_5_0;
-using V14 = Osdu.Schemas.WorkProductComponent.WellLog.V1_4_0;
+using V15 = Osdu.Models.WorkProductComponent.WellLog.V1_5_0;
+using V14 = Osdu.Models.WorkProductComponent.WellLog.V1_4_0;
 using Equinor.OsduCsharpClient.Facade;             // ToUntypedNode()
 
 var data = new V15.Data
@@ -58,9 +58,9 @@ pins the snapshot and lists the scoped groups, and every type and version is
 discovered from the snapshot automatically, so a snapshot bump (or adding a
 group) needs no other code change.
 
-Namespaces: `Osdu.Schemas.WorkProductComponent.<Type>.V<x>_<y>_<z>`,
-`Osdu.Schemas.MasterData.<Type>.V<x>_<y>_<z>` and
-`Osdu.Schemas.Dataset.<Type>.V<x>_<y>_<z>`. Dotted dataset type names are
+Namespaces: `Osdu.Models.WorkProductComponent.<Type>.V<x>_<y>_<z>`,
+`Osdu.Models.MasterData.<Type>.V<x>_<y>_<z>` and
+`Osdu.Models.Dataset.<Type>.V<x>_<y>_<z>`. Dotted dataset type names are
 concatenated into a single identifier (`File.Generic` → `FileGeneric`).
 Generator:
 [NJsonSchema][njs] (draft-07). Output: one `Data` class per version +
@@ -78,12 +78,12 @@ carry values outside the published enum sets.
 ## Repo layout
 
 ```
-osdu-csharp-schemas/
+osdu-csharp-models/
 ├── README.md
 ├── schemas/M27.0/                 # pinned snapshot of data-definitions Generated/
 ├── tools/SchemaGen/                # dotnet console: extracts `data`, flattens, runs NJsonSchema
-├── src/Osdu.Schemas/               # the library — generated code (gitignored)
-├── tests/Osdu.Schemas.Tests/       # round-trip coverage for every generated version
+├── src/Osdu.Models/               # the library — generated code (gitignored)
+├── tests/Osdu.Models.Tests/       # round-trip coverage for every generated version
 └── samples/IngestWellLog/          # end-to-end: typed POCO + WBDDMS Record envelope
 ```
 
@@ -94,7 +94,7 @@ osdu-csharp-schemas/
 dotnet run --project tools/SchemaGen
 
 # Build everything
-dotnet build Osdu.Schemas.slnx
+dotnet build Osdu.Models.slnx
 
 # Run tests
 dotnet test
@@ -103,7 +103,7 @@ dotnet test
 dotnet run --project samples/IngestWellLog
 ```
 
-Generated code lives under `src/Osdu.Schemas/Generated/` and is gitignored
+Generated code lives under `src/Osdu.Models/Generated/` and is gitignored
 — regenerable from the pinned snapshot, never hand-edited.
 
 The round-trip tests validate every generated version against the canonical

@@ -1,12 +1,12 @@
 # Contributing
 
-Thanks for your interest in contributing to `osdu-csharp-schemas`! This project
+Thanks for your interest in contributing to `osdu-csharp-models`! This project
 generates typed C# domain models from a pinned snapshot of the OSDU schema
 registry. Contributions are welcome via issues and pull requests.
 
 ## Reporting issues
 
-- Search [existing issues](https://github.com/equinor/osdu-csharp-schemas/issues)
+- Search [existing issues](https://github.com/equinor/osdu-csharp-models/issues)
   before opening a new one.
 - For security vulnerabilities, **do not** open a public issue — follow
   [`SECURITY.md`](SECURITY.md) instead.
@@ -17,11 +17,11 @@ Requires the .NET SDK (see `Directory.Build.props`/`global.json` for the target)
 
 ```bash
 dotnet run --project tools/SchemaGen   # regenerate the C# from the pinned snapshot
-dotnet build Osdu.Schemas.slnx          # build everything
+dotnet build Osdu.Models.slnx          # build everything
 dotnet test                             # round-trip + integration tests
 ```
 
-Generated code under `src/Osdu.Schemas/Generated/` is gitignored and fully
+Generated code under `src/Osdu.Models/Generated/` is gitignored and fully
 regenerable from the pinned snapshot in `schemas/`. Do not hand-edit generated
 models; change the generator (`tools/SchemaGen`) or the snapshot instead.
 
