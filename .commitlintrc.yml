@@ -12,3 +12,11 @@ rules:
       - chore
       - refactor
       - ci
+  # Dependabot titles NuGet updates "deps: Bump ..." (sentence-case) regardless of
+  # grouping, so allow sentence-case; the rest of config-conventional's check stays.
+  subject-case:
+    - 2
+    - never
+    - - start-case
+      - pascal-case
+      - upper-case
