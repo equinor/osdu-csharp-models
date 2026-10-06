@@ -48,12 +48,12 @@ side-by-side namespaces:
 
 | Group | Types | Versions |
 |---|---|---|
-| `work-product-component` | 97 | 291 |
-| `master-data` | 79 | 222 |
+| `work-product-component` | 103 | 298 |
+| `master-data` | 90 | 237 |
 | `dataset` | 28 | 60 |
 
-**204 entity types across 573 schema versions** + 145 abstract building
-blocks = 718 input files. The generator is data-driven: `tools/SchemaGen/manifest.json`
+**221 entity types across 595 schema versions** + 145 abstract building
+blocks = 740 input files. The generator is data-driven: `tools/SchemaGen/manifest.json`
 pins the snapshot and lists the scoped groups, and every type and version is
 discovered from the snapshot automatically, so a snapshot bump (or adding a
 group) needs no other code change.
@@ -80,7 +80,7 @@ carry values outside the published enum sets.
 ```
 osdu-csharp-models/
 ├── README.md
-├── schemas/M27.0/                 # pinned snapshot of data-definitions Generated/
+├── schemas/M27.1/                 # pinned snapshot of data-definitions Generated/
 ├── tools/SchemaGen/                # dotnet console: extracts `data`, flattens, runs NJsonSchema
 ├── src/Osdu.Models/               # the library — generated code (gitignored)
 ├── tests/Osdu.Models.Tests/       # round-trip coverage for every generated version
@@ -121,8 +121,8 @@ git -C ../data-definitions sparse-checkout set Examples
 ## Updating the snapshot
 
 The `schemas/<snapshot>/` directory is a pinned copy of the OSDU `Generated/`
-schemas (the current one, `M27.0`, is data-definitions tag `v0.30.0` — the
-M27 milestone publication). Bumping it is an explicit, reviewable PR:
+schemas (the current one, `M27.1`, is data-definitions tag `v0.30.1` — the
+M27.1 milestone publication). Bumping it is an explicit, reviewable PR:
 
 1. Copy the new `work-product-component`, `master-data`, `dataset` and
    `abstract` folders into a new `schemas/<new-snapshot>/` directory.
