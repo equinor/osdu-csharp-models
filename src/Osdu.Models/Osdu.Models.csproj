@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageId>Equinor.Osdu.Models</PackageId>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <RootNamespace>Osdu.Models</RootNamespace>
   </PropertyGroup>
 
