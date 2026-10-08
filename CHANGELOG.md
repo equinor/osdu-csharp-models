@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/equinor/osdu-csharp-models/compare/v1.0.0...v1.1.0) (2026-10-08)
+
+
+### Features
+
+* bump data-definitions snapshot to M27.1 (v0.30.1) ([#27](https://github.com/equinor/osdu-csharp-models/issues/27)) ([982775c](https://github.com/equinor/osdu-csharp-models/commit/982775c4f7cb21dfbe9fafce260970d9c66f5735))
+
+
+### Dependencies
+
+* bump the github-actions group with 3 updates ([#23](https://github.com/equinor/osdu-csharp-models/issues/23)) ([8dd2536](https://github.com/equinor/osdu-csharp-models/commit/8dd2536b4312baedf3fca66cbdcbd208dd1dda41))
+* bump the nuget group with 3 updates ([#26](https://github.com/equinor/osdu-csharp-models/issues/26)) ([aca8e5d](https://github.com/equinor/osdu-csharp-models/commit/aca8e5d6450026461e62654ebb5de9d0a9c7cfa2))
+
 ## [1.0.0](https://github.com/equinor/osdu-csharp-models/compare/v0.3.1...v1.0.0) (2026-09-08)
 
 
