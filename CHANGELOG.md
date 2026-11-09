@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/equinor/osdu-csharp-models/compare/v1.1.2...v1.1.3) (2026-11-09)
+
+
+### Dependencies
+
+* bump the github-actions group with 3 updates ([#36](https://github.com/equinor/osdu-csharp-models/issues/36)) ([95a6943](https://github.com/equinor/osdu-csharp-models/commit/95a694317e6a68dbdd03cfc22d4d90fad0e288d2))
+
 ## [1.1.2](https://github.com/equinor/osdu-csharp-models/compare/v1.1.1...v1.1.2) (2026-11-01)
 
 
